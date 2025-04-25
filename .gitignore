@@ -1,1 +1,10 @@
-screenshots/
+*.log
+*.pcap
+*.tmp
+*.mp4
+*.gif
+*.swp
+.DS_Store
+.idea/
+.vscode/
+loot/
