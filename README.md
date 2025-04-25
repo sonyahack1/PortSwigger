@@ -2,7 +2,11 @@
 
 # PortSwigger Web Security Academy Writeups
 
+---
+
+```html
 <img src="./screenshots/portlogo.png" alt="Logo" width="100"/>
+```
 
 This repository contains my personal writeups and notes for labs completed on the [PortSwigger Web Security Academy](https://portswigger.net/web-security).
 Each lab includes an explanation of the vulnerability, tools used, and exploitation techniques.
