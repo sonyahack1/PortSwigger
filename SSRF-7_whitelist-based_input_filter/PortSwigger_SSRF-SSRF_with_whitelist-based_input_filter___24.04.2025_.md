@@ -43,7 +43,7 @@ stockApi=<@urlencode>http://stock.weliketoshop.net:8080/product/stock/check?prod
 > Ok. I will try some methods that probably work.
 
 > I know that there is logic on the server side to check the domain that the request comes to. For example, if i try to change "stock.weliketoshop.net"
-> to any other domain, then i will get an error from the server that the request should be made only to "stock.weliketoshop.net".
+> to any other domain, then i will get an error from the server that **the request should be made only to "stock.weliketoshop.net"**.
 
 > For example:
 
@@ -66,9 +66,9 @@ Content-Length: 58
 "External stock check host must be stock.weliketoshop.net"
 
 ```
-> So. There are several ways that can help to trick the server filter and make it make a request to an allowed domain. It is important to remember that I am trying to
-> bypass the filtering at the level of the application code itself, so that the server makes the request further away from itself, and then the request itself with the
-> parsing function and url-encoding. 
+> So. There are several ways that can help to trick the server filter and make it make a request to an allowed domain.
+> **Note:** It is important to remember that I am trying to bypass the filtering at the level of the application code itself, so
+> that the server makes the request further away from itself, and then the request itself with the parsing function and url-encoding. 
 
 > When a URL has '@', everything before the '@' is considered credentials (login and password). And everything after the '@' is considered the real host.
 > The '#' symbol in the URL is the beginning of a fragment that is not sent at all. It is only for browsers
