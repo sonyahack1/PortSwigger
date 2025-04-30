@@ -15,7 +15,7 @@ Periodically I will return to the laboratories and machines I have completed and
 
 ## Structure
 
-Writeups are organized by topic and lab title
+Writeups are organized by topic and lab title.
 
 
 ## ⚠️  Disclaimer
