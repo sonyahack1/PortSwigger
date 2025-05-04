@@ -2,7 +2,7 @@
 
 ---
 
-- **Target** SSRF lab - Basic SSRF against the local server
+- **Target** SSRF Lab - Basic SSRF against the local server
 - **Author:** sonyahack1
 - **Date:** 22.04.2025
 
@@ -35,7 +35,7 @@ Te: trailers
 stockApi=http%3A%2F%2Fstock.weliketoshop.net%3A8080%2Fproduct%2Fstock%2Fcheck%3FproductId%3D6%26storeId%3D1
 ```
 
-> url decode the request body and use **<@urlencode></@urlencode>**:
+> url decode the request body and use ```bash<@urlencode></@urlencode>```:
 
 ```bash
 
