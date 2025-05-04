@@ -35,7 +35,7 @@ Te: trailers
 stockApi=http%3A%2F%2Fstock.weliketoshop.net%3A8080%2Fproduct%2Fstock%2Fcheck%3FproductId%3D6%26storeId%3D1
 ```
 
-> url decode the request body and use ```bash<@urlencode></@urlencode>```:
+> url decode the request body and use ```<@urlencode></@urlencode>```:
 
 ```bash
 
@@ -45,7 +45,7 @@ stockApi=<@urlencode>http://stock.weliketoshop.net:8080/product/stock/check?prod
 
 > i need to access the admin panel at **localhost** and delete the user Carlos.
 > That is I replace the request from the server side to make a request where I need and get the result.
-> i change the request to **http://localhost/admin**:
+> i change the request to ```http://localhost/admin```:
 
 ```bash
 
