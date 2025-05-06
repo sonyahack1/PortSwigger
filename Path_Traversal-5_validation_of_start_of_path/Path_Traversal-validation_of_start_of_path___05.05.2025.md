@@ -57,7 +57,7 @@ GET /image?filename=/var/www/images/../../../../etc/passwd HTTP/2
 > As a result, I get the contents of the **/etc/passwd** file
 
 
-![solved_lab](./screenshots/solved_lab.png)
+![passwd_file](./screenshots/passwd_file.png)
 
 > In simple terms, this vulnerability exists due to poor interpretation of the full path for the parameter.
 > it might look something like this:
@@ -91,4 +91,4 @@ if not requested_path.startswith(realpath(base_path)):
 
 ---
 
-![passwd_file](./screenshots/passwd_file.png)
+![solved_lab](./screenshots/solved_lab.png)
