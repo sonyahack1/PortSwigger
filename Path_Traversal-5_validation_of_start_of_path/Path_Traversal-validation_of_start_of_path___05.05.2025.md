@@ -8,6 +8,7 @@
 ---
 
 > The vulnerability contains in the display of product images
+
 > i open any product card and open its image in new tab
 
 ![image](./screenshots/image.png)
@@ -39,6 +40,7 @@ Connection: keep-alive
 ```
 
 > I need to extract the contents of the file **/etc/passwd** . I see that the value of the parameter **filename** is the full path to the image on the server.
+
 > at the end of this path I use **../../../../etc/passwd** to go up a few levels and read the file **/etc/passwd**
 
 
@@ -60,6 +62,7 @@ GET /image?filename=/var/www/images/../../../../etc/passwd HTTP/2
 ![passwd_file](./screenshots/passwd_file.png)
 
 > In simple terms, this vulnerability exists due to poor interpretation of the full path for the parameter.
+
 > it might look something like this:
 
 ```python
@@ -73,6 +76,7 @@ def get_file(request):
 ```
 
 > If I pass **../../../../etc/passwd** to the parameter value the server will simply add it to the end path **/var/www/images**
+
 > The result is **/var/www/images/../../../../etc/passwd**.
 
 > **Note:** for example, this can be fixed with the following code:
