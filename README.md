@@ -20,7 +20,11 @@ Writeups are organized by topic and lab title.
 
 ## ⚠️  Disclaimer
 
-> All content is for educational purposes only. Do not attempt to exploit any systems without explicit permission.
+> These writeups are created for educational purposes only. Demonstration of tools and various pentesting techniques does not encourage their use outside the legal field.
+
+> This repository should be used only for ethical purposes: to protect your own systems, improve cybersecurity skills, or within the framework of official agreements.
+
+> The author is not responsible for direct or indirect damage resulting from the illegal use of the presented materials
 
 ---
 
