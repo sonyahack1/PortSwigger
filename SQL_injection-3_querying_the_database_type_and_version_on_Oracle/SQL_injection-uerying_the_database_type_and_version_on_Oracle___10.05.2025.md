@@ -16,9 +16,9 @@
 
 ## 🔍 Request interception
 
-> уязвимость SQL инъекции находится в функционале фильтра категорий продукта.
+> SQL injection vulnerability is in the product category filter functionality.
 
-> Перехватываю запрос выбора произвольного фильтра (для примера `pets`):
+> I intercept the request to select an arbitrary filter (for example `pets`):
 
 ```http
 
@@ -40,14 +40,14 @@ Te: trailers
 
 ```
 
-> Для решения этой лабы мне нужно вывести версию используемой базы данных.
+> To solve this lab I need to output the version of the database I'm using.
 
-> Использую UNION-based SQL инъекцию для извлечения данных.
+> I use UNION-based SQL injection to extract data.
 
-> **Note:** `UNION` — это оператор в языке запросов `SQL` который объединяет результаты двух `SELECT` запросов с одинаковым числом столбцов и совместимыми типами данных.
-> Тем самым я могу извлечь данные из произвольной таблицы.
+> **Note:** `UNION` is an operator in the `SQL` query language that combines the results of two `SELECT` queries with the same number of columns and compatible data types.
+> This way I can extract data from an arbitrary table.
 
-> Проверяю что `SQL` инъекция возможна:
+> I check that `SQL` injection is possible:
 
 ```http
 
@@ -58,11 +58,11 @@ GET /filter?category=' or 1=1 -- HTTP/2
 
 ![sqli](./screenshots/sqli.png)
 
-> Ок. Определяю количество столбцов в таблице. Это важно по скольку `UNION` требует чтобы обе части `SELECT` запроса возвращали одинаковое количество столбцов.
-> Использую оператор `ORDER BY` который используется для сортировки результатов запроса по одному или нескольким столбцам
+> Ok. I determine the number of columns in the table. This is important because `UNION` requires that both parts of the `SELECT` query return the same number of columns.
+> I use the `ORDER BY` operator, which is used to sort the query results by one or more columns
 
-> Для перебора столбцов использую `Intruder`.
-> Генерирую текстовый файл с числами от `1 до 10` (например не больше 10 столбцов):
+> I use `Intruder` to iterate through the columns.
+> I generate a text file with numbers from `1 to 10` (for example, no more than 10 columns):
 
 ```bash
 
@@ -70,20 +70,20 @@ seq 1 10 > numbers.txt
 
 ```
 
-> запускаю перебор столбцов:
+> I start iterating over columns:
 
 ![intruder](./screenshots/intruder.png)
 ![intruder_payload](./screenshots/intruder_payload.png)
 
-> На позиции `3` сервер возвращает ошибку:
+> At position `3` the server returns an error:
 
 ![intruder_error](./screenshots/intruder_error.png)
 
-> Это означает что столбцов в таблице `2`.
+> This means that there are `2` columns in the table.
 
-> Чтобы отобразить версию Oracle базы данных использую запрос `SELECT banner FROM v$version`.
+> To display the Oracle database version, I use the query `SELECT banner FROM v$version`.
 
-> Так как столбцов в таблице `2` то добавляю затычку в виде `null` чтобы количество столбцов в двух `SELECT` запросах совпадало.
+> Since there are `2` columns in the table, I add a stopper in the form of `null` so that the number of columns in the two `SELECT` queries matches.
 
 ```http
 
@@ -94,6 +94,6 @@ GET /filter?category=' UNION SELECT null,banner FROM v$version -- HTTP/2
 
 ![db_version](./screenshots/db_version.png)
 
-> Получаю информацию о версии Oracle Database.
+> Getting information about the Oracle Database version.
 
 ![solved_lab](./screenshots/solved_lab.png)
