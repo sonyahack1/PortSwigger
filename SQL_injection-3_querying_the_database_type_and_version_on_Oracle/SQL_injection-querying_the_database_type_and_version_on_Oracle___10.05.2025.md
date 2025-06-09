@@ -5,7 +5,7 @@
 
 ---
 
-- 🎯 **Target:** SQL injection Lab - vulnerability allowing login bypass
+- 🎯 **Target:** SQL injection Lab - Querying the database type and version on Oracle
 - 🧑‍💻 **Author:** sonyahack1
 - 📅 **Date:** 05.10.2025
 - 📊 **Difficulty:** APPRENTICE
@@ -42,7 +42,7 @@ Te: trailers
 
 > To solve this lab I need to output the version of the database I'm using.
 
-> I use UNION-based SQL injection to extract data.
+> I use `UNION-based` SQL injection to extract data.
 
 > **Note:** `UNION` is an operator in the `SQL` query language that combines the results of two `SELECT` queries with the same number of columns and compatible data types.
 > This way I can extract data from an arbitrary table.
