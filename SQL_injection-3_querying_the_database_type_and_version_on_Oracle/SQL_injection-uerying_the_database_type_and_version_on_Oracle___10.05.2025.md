@@ -73,7 +73,7 @@ seq 1 10 > numbers.txt
 > I start iterating over columns:
 
 ![intruder](./screenshots/intruder.png)
-![intruder_payload](./screenshots/intruder_payload.png)
+![intruder_payload](./screenshots/Intruder_payload.png)
 
 > At position `3` the server returns an error:
 
