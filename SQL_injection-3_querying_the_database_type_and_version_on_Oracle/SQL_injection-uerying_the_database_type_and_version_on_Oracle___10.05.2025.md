@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="./screenshots/sqli_logo.png" alt="sqli_logo" width="100%"/>
+  <img src="./screenshots/sql_logo.png" alt="sql_logo"/>
 </p>
 
 ---
