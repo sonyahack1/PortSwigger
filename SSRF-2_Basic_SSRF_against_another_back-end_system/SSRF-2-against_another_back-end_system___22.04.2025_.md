@@ -1,12 +1,12 @@
 
 <p align="center">
-  <img src="./screenshots/ssrf_logo.png" alt="ssrf_logo"/>
+  <img src="./screenshots/ssrf_logo_.png" alt="ssrf_logo"/>
 </p>
 
 ---
 
 - 🎯 **Target:** SSRF Lab - Basic SSRF against another back-end system
-- 🧑‍💻 **Author:** sonyahack1
+- 🧑‍💻 **Author:** `sonyahack1`
 - 📅 **Date:** 22.04.2025
 - 📊 **Difficulty:** APPRENTICE
 - 📁 **Category:** Web - SSRF (`Non-Blind Internal SSRF`)
