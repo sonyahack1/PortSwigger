@@ -44,13 +44,13 @@ Te: trailers
 
 ```
 
-> To solve this lab, you need to output a string containing the version of the `MySQL` database. To do this I need to execute a query like `select @@version`:
+> To solve this lab I need to output a string containing the version of the `MySQL` database. To do this I need to execute a query like `select @@version`:
 
 ![mysql_version](./screenshots/mysql_version.png)
 
 > I will use the `UNION` operator in the sql query to combine two `SELECT` queries to extract data.
 
-> To perform this attack, I will first determine the number of columns. I will automate the process using brute force via `BurpSuite`.
+> To perform this attack I will first determine the number of columns. I will automate the process using brute force via `BurpSuite`.
 > We will generate a text document with a sequence of numbers from 1 to 10 (for example) via the `seq` tool:
 
 ```bash
