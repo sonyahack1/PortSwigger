@@ -7,8 +7,8 @@
 
 - 🎯 **Target:** SQL injection Lab - Querying the database type and version on Oracle
 - 🧑‍💻 **Author:** sonyahack1
-- 📅 **Date:** 05.10.2025
-- 📊 **Difficulty:** APPRENTICE
+- 📅 **Date:** 10.05.2025
+- 📊 **Difficulty:** PRACTITIONER
 - 📁 **Category:** Web - SQL injection (Union Based)
 
 ---
