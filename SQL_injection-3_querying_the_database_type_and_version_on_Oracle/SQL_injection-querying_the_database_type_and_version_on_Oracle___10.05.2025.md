@@ -9,10 +9,9 @@
 - 🧑‍💻 **Author:** sonyahack1
 - 📅 **Date:** 10.05.2025
 - 📊 **Difficulty:** PRACTITIONER
-- 📁 **Category:** Web - SQL injection (Union Based)
+- 📁 **Category:** Web - SQL injection (`Union Based`)
 
 ---
-
 
 ## 🔍 Request interception
 
@@ -94,6 +93,6 @@ GET /filter?category=' UNION SELECT null,banner FROM v$version -- HTTP/2
 
 ![db_version](./screenshots/db_version.png)
 
-> Getting information about the Oracle Database version.
+> Getting information about the `Oracle Database version`.
 
 ![solved_lab](./screenshots/solved_lab.png)
