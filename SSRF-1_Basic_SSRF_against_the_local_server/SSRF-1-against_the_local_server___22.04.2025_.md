@@ -1,15 +1,21 @@
 
+<p align="center">
+  <img src="./screenshots/ssrf_logo_.png" alt="ssrf_logo"/>
+</p>
 
 ---
 
-- **Target** SSRF Lab - Basic SSRF against the local server
-- **Author:** sonyahack1
-- **Date:** 22.04.2025
+- 🎯 **Target:**  SSRF Lab - Basic SSRF against the local server
+- 🧑‍💻 **Author:** `sonyahack1`
+- 📅 **Date:** 22.04.2025
+- 📊 **Difficulty:** APPRENTICE
+- 📁 **Category:** Web - SSRF
 
 ---
 
+## 🔍 Request interception
 
-## Intercepting a request for the stock check function
+> I intercept the request to the `stock check` function:
 
 ```html
 
