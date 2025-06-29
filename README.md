@@ -1,3 +1,6 @@
+<div align="center">
+<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&pause=1000&color=F75151&center=true&vCenter=true&width=435&lines=%F0%9D%97%A3%F0%9D%97%BC%F0%9D%97%BF%F0%9D%98%81%F0%9D%97%A6%F0%9D%98%84%F0%9D%97%B6%F0%9D%97%B4%F0%9D%97%B4%F0%9D%97%B2%F0%9D%97%BF+%F0%9D%97%9F%F0%9D%97%AE%F0%9D%97%AF%F0%9D%98%80" alt="Typing SVG" /></a>
+</div>
 
 
 # PortSwigger Web Security Academy Writeups
