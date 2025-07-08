@@ -55,8 +55,8 @@ stockApi=<@urlencode>http://stock.weliketoshop.net:8080/product/stock/check?prod
 
 ```
 
-> Фукнция `check stock` выполняет запрос на ресурс `stock.weliketoshop.net:8080` используя маршрут `/product/stock/check` по которому выполняется функция проверки наличия
-> продукта `productId` в выбранном месте `storeId`.
+> The `check stock` function makes a request to the resource `stock.weliketoshop.net:8080` using the route `/product/stock/check`, which executes the function to check the
+> availability of the product `productId` in the selected location `storeId`.
 
 > The developers on the server side have implemented some protection against `SSRF attacks` which filters requests to internal system resources in the event of a request address being spoofed.
 
