@@ -56,7 +56,7 @@ stockApi=<@urlencode>http://stock.weliketoshop.net:8080/product/stock/check?prod
 ```
 
 > The `check stock` function makes a request to the resource `stock.weliketoshop.net:8080` using the route `/product/stock/check`, which executes the function to check the
-> availability of the product `productId` in the selected location `storeId`.
+> availability of the product (`productId`) in the selected location (`storeId`).
 
 > The developers on the server side have implemented some protection against `SSRF attacks` which filters requests to internal system resources in the event of a request address being spoofed.
 
@@ -106,7 +106,7 @@ stockApi=<@urlencode>http://LocalHOst/AdMiN</@urlencode>
 
 ---
 
-> To solve this problem, you need to send a request to delete the user `carlos`:
+> To solve this lab you need to send a request to delete the user `carlos`:
 
 ```bash
 
