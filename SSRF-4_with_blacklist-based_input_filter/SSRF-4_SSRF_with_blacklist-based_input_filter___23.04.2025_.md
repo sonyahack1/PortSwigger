@@ -134,4 +134,4 @@ urllib.parse.urlparse(user_input_url.lower())
 ```
 > `2)` Use `DNS resolving` with IP address checking. That is, perform a recursive request by domain name and check the received IP address with `whitelist`
 
-> `3)` Prohibit any requests to internal local system resources in principle by isolating the network.
+> `3)` Prohibit any requests to internal local system resources by isolating the network.
