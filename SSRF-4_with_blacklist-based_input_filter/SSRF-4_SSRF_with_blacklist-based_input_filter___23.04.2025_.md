@@ -82,6 +82,7 @@ stockApi=<@urlencode>http://LocalHOst</@urlencode>
 ```
 
 > Result:
+
 ![LocalHOst_answer](./screenshots/LocalHOst_answer.png)
 
 > Filter bypass with case-shifting worked. The server returned a response with code 200 and results in the form of an HTML page. Nice.
@@ -95,7 +96,8 @@ stockApi=<@urlencode>http://LocalHOst/AdMiN</@urlencode>
 ```
 
 > Result:
-![AdMiN_answer](./screenhots/AdMiN_answer.png)
+
+![AdMiN_answer](./screenshots/AdMiN_answer.png)
 
 ![admin_panel](./screenshots/admin_panel.png)
 
